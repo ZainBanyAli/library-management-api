@@ -102,9 +102,6 @@ CREATE TABLE books (
 
 
 
-Login 
 
-Get the token and send it in the Authorization header:
-Authorization: Bearer your_token_here
 
  
