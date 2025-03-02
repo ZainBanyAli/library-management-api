@@ -1,11 +1,11 @@
 # library-management-api
  Library Management System using Node.js with TypeScript 
 
-* Project Overview
+** Project Overview
 
 This is a RESTful API for managing a simple library system, built with Node.js and TypeScript, using MySQL raw queries. It follows best practices in Object-Oriented Programming (OOP) and implements a design pattern for better code maintainability.
 
-* Technologies Used
+** Technologies Used
 
 Node.js with TypeScript
 
@@ -18,7 +18,7 @@ JWT Authentication (Secure API requests)
 Design Pattern: Factory Pattern
 
 
-* Project Structure
+** Project Structure
 /library-management-api
 │── src/
 │   ├── config/db.ts  # Database connection
@@ -35,7 +35,7 @@ Design Pattern: Factory Pattern
 │── .env.example  # Environment variables
 │── README.md
 
-* Setup & Installation
+** Setup & Installation
 
 1️⃣ Clone the Repository
 git clone 
@@ -60,7 +60,7 @@ PORT=5000
 npm run dev
 
 
-* Authentication
+** Authentication
 
 This API uses JWT authentication. To access secured routes:
 Login 
@@ -68,9 +68,42 @@ Get the token and send it in the Authorization header:
 Authorization: Bearer your_token_here
 
 
+** API Endpoints:
+## Authentication Endpoints
+
+| Method | Endpoint     | Description |
+|--------|-------------|-------------|
+| POST   | `/register` | Register a new user |
+| POST   | `/login`    | Authenticate user and get JWT token |
+| GET    | `/profile`  | Access protected user profile (Requires JWT) |
+
+##  Author Endpoints
+
+**Base URL:** `http://localhost:5001/api`
+
+| Method | Endpoint              | Description |
+|--------|----------------------|-------------|
+| POST   | `/api/authors`       | Add a new author (Requires JWT) |
+| GET    | `/api/authors`       | Get a list of all authors |
+| PUT    | `/api/authors/:id`   | Update an author's details (Requires JWT) |
+| DELETE | `/api/authors/:id`   | Delete an author (Requires JWT) |
 
 
-$ sql database queries
+##  Book Endpoints
+
+**Base URL:** `http://localhost:5001/api`
+
+| Method | Endpoint         | Description |
+|--------|-----------------|-------------|
+| POST   | `/api/books`    | Add a new book (Requires JWT) |
+| GET    | `/api/books`    | Get a list of all books |
+| PUT    | `/api/books/:id` | Update a book's details (Requires JWT) |
+| DELETE | `/api/books/:id` | Delete a book (Requires JWT) |
+
+
+
+
+## sql database queries:
 CREATE DATABASE IF NOT EXISTS library;
 
 USE library;
