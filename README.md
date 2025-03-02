@@ -15,8 +15,7 @@ MySQL (Database)
 
 JWT Authentication (Secure API requests)
 
-Design Pattern: Factory Pattern
-
+Design Patterns: MVC, Singleton, and Factory Patterns
 
 ** Project Structure
 /library-management-api
@@ -34,6 +33,8 @@ Design Pattern: Factory Pattern
 │── tsconfig.json
 │── .env.example  # Environment variables
 │── README.md
+
+
 
 ** Setup & Installation
 
@@ -58,6 +59,7 @@ PORT=5000
 
 5️⃣ Start the Server
 npm run dev
+
 
 
 ** Authentication
@@ -100,6 +102,30 @@ Authorization: Bearer your_token_here
 | PUT    | `/api/books/:id` | Update a book's details (Requires JWT) |
 | DELETE | `/api/books/:id` | Delete a book (Requires JWT) |
 
+
+## Design Patterns Used
+
+## Singleton Pattern (Database Connection)
+
+This project uses the Singleton Pattern for managing the database connection efficiently. The Singleton Pattern ensures that only one instance of the database connection pool is created and shared across the entire application, preventing multiple redundant connections.
+
+Implementation:
+
+The database connection is created using mysql2 and stored in a shared connection pool.
+
+When a query is executed, it reuses the same connection pool instead of opening a new connection every time.
+
+The pool is exported using pool.promise(), ensuring a single shared instance is used throughout the application.
+
+## Factory Pattern (Object Creation)
+
+This project also uses the Factory Pattern to streamline the creation of Book and Author objects.
+
+Implementation:
+
+Instead of directly instantiating objects, the Factory Pattern provides a single point of creation.
+
+This improves code reusability and maintainability by centralizing object construction logic.
 
 
 
