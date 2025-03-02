@@ -19,20 +19,39 @@ Design Patterns: MVC, Singleton, and Factory Patterns
 
 ## Project Structure
 /library-management-api
-│── src/
-│   ├── config/db.ts  # Database connection
-│   ├── controllers/  # API controllers
-│   ├── factories/    # Factory pattern implementation
-│   ├── middlewares/  # Middleware for validation & auth
-│   ├── repositories/ # Data handling (Raw MySQL queries)
-│   ├── routes/       # API routes
-│   ├── services/     # Business logic layer
-│   ├── index.ts      # Entry point
-│── database/library.sql  # Database schema
-│── package.json
-│── tsconfig.json
-│── .env.example  # Environment variables
-│── README.md
+## Project Structure
+
+**Root Directory**
+- `/library-management-api`
+  - `src/` - Main source code directory
+    - `config/`
+      - `db.ts` - Database connection
+    - `controllers/` - API controllers
+      - `bookController.ts`
+      - `authorController.ts`
+    - `factories/` - Factory pattern implementation
+      - `bookFactory.ts`
+      - `authorFactory.ts`
+    - `middlewares/` - Middleware for validation & authentication
+      - `authMiddleware.ts`
+      - `validationMiddleware.ts`
+    - `repositories/` - Data handling (Raw MySQL queries)
+      - `bookRepository.ts`
+      - `authorRepository.ts`
+    - `routes/` - API routes
+      - `bookRoutes.ts`
+      - `authorRoutes.ts`
+      - `authRoutes.ts`
+    - `services/` - Business logic layer
+      - `bookService.ts`
+      - `authorService.ts`
+    - `index.ts` - Entry point
+ 
+  - `package.json`
+  - `tsconfig.json`
+  - `.env.example` - Environment variables
+  - `README.md`
+
 
 
 
