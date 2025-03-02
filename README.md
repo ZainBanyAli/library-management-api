@@ -92,11 +92,13 @@ Authorization: Bearer your_token_here
 ##  API Endpoints:
 ## Authentication Endpoints
 
-| Method | Endpoint     | Description |
-|--------|-------------|-------------|
-| POST   | `/register` | Register a new user |
-| POST   | `/login`    | Authenticate user and get JWT token |
-| GET    | `/profile`  | Access protected user profile (Requires JWT) |
+**Base URL:** `http://localhost:5001/api/auth`
+
+| Method | Endpoint              | Description |
+|--------|----------------------|-------------|
+| POST   | `/api/auth/register` | Register a new user |
+| POST   | `/api/auth/login`    | Authenticate user and get JWT token |
+| GET    | `/api/auth/profile`  | Access protected user profile (Requires JWT) |
 
 ##  Author Endpoints
 
