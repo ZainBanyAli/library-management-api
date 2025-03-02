@@ -1,11 +1,11 @@
 # library-management-api
  Library Management System using Node.js with TypeScript 
 
-** Project Overview
+## Project Overview
 
 This is a RESTful API for managing a simple library system, built with Node.js and TypeScript, using MySQL raw queries. It follows best practices in Object-Oriented Programming (OOP) and implements a design pattern for better code maintainability.
 
-** Technologies Used
+## Technologies Used
 
 Node.js with TypeScript
 
@@ -17,7 +17,7 @@ JWT Authentication (Secure API requests)
 
 Design Patterns: MVC, Singleton, and Factory Patterns
 
-** Project Structure
+## Project Structure
 /library-management-api
 │── src/
 │   ├── config/db.ts  # Database connection
@@ -36,7 +36,7 @@ Design Patterns: MVC, Singleton, and Factory Patterns
 
 
 
-** Setup & Installation
+## Setup & Installation
 
 1️⃣ Clone the Repository
 git clone 
@@ -62,7 +62,7 @@ npm run dev
 
 
 
-** Authentication
+## Authentication
 
 This API uses JWT authentication. To access secured routes:
 Login 
@@ -70,7 +70,7 @@ Get the token and send it in the Authorization header:
 Authorization: Bearer your_token_here
 
 
-** API Endpoints:
+##  API Endpoints:
 ## Authentication Endpoints
 
 | Method | Endpoint     | Description |
