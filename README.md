@@ -128,6 +128,35 @@ Instead of directly instantiating objects, the Factory Pattern provides a single
 This improves code reusability and maintainability by centralizing object construction logic.
 
 
+## MVC (Model-View-Controller) Architecture
+
+This project follows the **MVC design pattern** for better organization and separation of concerns.
+
+### Implementation:
+
+1. **Controller Layer (`controllers/`)**
+   - Handles HTTP requests and responses.
+   - Calls **services** to perform business logic.
+   - Example: `bookController.ts`, `authorController.ts`.
+
+2. **Service Layer (`services/`)**
+   - Contains **business logic** and processes data before sending it to the repository.
+   - Example: `bookService.ts`, `authorService.ts`.
+
+3. **Repository Layer (`repositories/`)**
+   - Handles **database queries** and interacts with MySQL.
+   - Keeps data operations separate from business logic.
+   - Example: `bookRepository.ts`, `authorRepository.ts`.
+
+### How MVC Works in This Project:
+1. A **client request** (Postman, frontend, etc.) hits a **route**.
+2. The **controller** processes the request and calls the **service layer**.
+3. The **service layer** applies business logic and calls the **repository layer**.
+4. The **repository layer** queries the **database** and returns results to the service.
+5. The **service layer** formats the data and sends it back to the **controller**.
+6. The **controller** returns the final response to the **client**.
+
+
 
 ## sql database queries:
 CREATE DATABASE IF NOT EXISTS library;
